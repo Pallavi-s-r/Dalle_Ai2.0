@@ -33,7 +33,7 @@ const generateImg = async () => {
   if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/ai', {
+        const response = await fetch('https://proxiai.onrender.com/api/v1/ai', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const handleSubmit = async(e) => {
     setLoading(true);
 
     try{
-        const response = await fetch ('http://localhost:8080/api/v1/post',{
+        const response = await fetch ('https://proxiai.onrender.com/api/v1/post',{
         method:'POST',
         headers: {
           'Content-Type' : 'application/json',
